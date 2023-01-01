@@ -72,10 +72,14 @@ import warnings
 import re
 import sre_constants
 import collections
+from collections import abc
 import pprint
 import traceback
 import types
 from datetime import datetime
+
+collections.MutableMapping = abc.MutableMapping
+collections.Iterable = abc.Iterable
 
 try:
     from _thread import RLock
